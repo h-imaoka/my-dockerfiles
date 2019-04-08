@@ -1,4 +1,4 @@
-FROM openjdk:8-stretch
+FROM openjdk:8-jre-slim
 
 ENV EMBULK_VERSION=0.9.16 \
     PATH_TO_EMBULK=/opt/local/embulk \
@@ -15,7 +15,7 @@ COPY Gemfile "${PATH_TO_EMBULK}/"
 RUN ${PATH_TO_EMBULK}/embulk bundle install
 
 COPY entrypoint.sh /
-COPY conf /src
+# COPY conf /src
 
 ENTRYPOINT ["bash", "/entrypoint.sh"]
 CMD ["embulk", "--help"]

@@ -2,17 +2,12 @@ version: '3'
 
 services:
   embulk:
-    image: himaoka/embulk:0.3
-    environment:
-      - AWS_ACCESS_KEY_ID
-      - AWS_SECRET_ACCESS_KEY
-      - AWS_REGION
-      - AWS_DEFAULT_REGION
-      - AWS_PROFILE
+    build: .
+    image: himaoka/embulk:0.9.16
     volumes:
       - .:/src
-      - ~/.aws:/root/.aws
     working_dir: /src
+    command: tail -f /dev/null
   db:
     image: postgres
     restart: always
