@@ -3,8 +3,8 @@ docker image - embulk
 
 # Overview
 
-- embulk 0.9.16
-- base openjdk:8-jre-slim
+- embulk 0.9.22
+- base himaoka/java:8-jre (buster + corretto8)
 
 # Build
 ## add plugins
