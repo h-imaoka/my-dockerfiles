@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # comment-in/add plugins for installation
 
 gem "embulk-filter-column"
-gem "embulk-filter-add_time"
+# gem "embulk-filter-add_time"
 # gem "embulk-filter-eval"
 # gem "embulk-filter-hash"
 # gem "embulk-filter-mask"
